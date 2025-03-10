@@ -25,7 +25,7 @@ while True:
     print("{ip_url} returned {ip_resonse.status_code}, bai")
     exit(1)
 
-  if config_ip != ip_resonse:
+  if config_ip != ip_resonse.text:
     v1.patch_namespaced_config_map(
       name = configmap_name,
       namespace = namespace,
